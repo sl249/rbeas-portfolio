@@ -1,1 +1,105 @@
+body {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body.ember-application {
+  flex-direction: row;
+  flex: 1;
+  display: flex;
+}
+
+body > div.ember-view {
+  flex-direction: row;
+  flex: 1;
+  display: flex;
+}
+
+$dark-contrast-color: rgba(255,255,255, .9);
+$color-indigo: (
+  '0': #FFFFFF,
+  '50': #D6DCFF,
+  '100': #A5B3FE,//
+  '200': #536DFE,//
+  '300': #536DFE,//
+  '400': #3D5AFE,//
+  '500': #304FFE,//
+  '600': #1237FD,//
+  '700': #0324D5,//
+  '800': #021BA2,//
+  '900': #02157D,//
+  '1000': #011060,//
+  'A100': #8C9EFF,//
+  'A200': #536DFE,//
+  'A400': #3D5AFE,//
+  'A700': #304FFE,//
+  'contrastDefaultColor': $dark-contrast-color
+);
+
 @import 'ember-paper';
+
+@mixin Roboto-Condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  height: 500px;
+  position: absolute;
+  width: 110%;
+  height: 300px;
+  left: -20px;
+  top: -50px;
+  z-index: -1;
+  background: linear-gradient(92.74deg, color($color-deep-purple, 'A100') 16.67%, color($primary, '500') 100.76%);
+  transform: rotate(3deg);
+}
+
+body {
+  background-color: rgba(color($color-grey, '900'), .04);
+}
+
+.logo {
+  &:not(.no-border) {
+    border: 4px solid color($primary, 'contrastDefaultColor');
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  &:before {
+    content: 'Rb';
+    @include Roboto-Condensed;
+    color: color($primary, 'contrastDefaultColor');
+    font-weight: bold;
+    font-size: 40px;
+  }
+}
+
+.md-button {
+  &.md-raised {
+    &.md-round {
+      border-radius: 14px;
+    }
+
+    &.link-buttons {
+      @include Roboto-Condensed;
+      padding-left: 16px;
+      padding-right: 8px;
+    }
+
+    &.resume-download {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      @include Roboto-Condensed;
+      padding: 8px 40px 8px 4px;
+      border-radius: 20px;
+    }
+  }
+}
+
+md-icon.md-default-theme, md-icon {
+  color: color($primary, 'contrastDefaultColor');
+}

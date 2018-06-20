@@ -1,0 +1,26 @@
+<div class="header"></div>
+
+<div class="layout-row layout-align-start-start">
+  {{#paper-button iconButton=true class="contrast"}}
+    {{paper-icon "menu" size=30}}
+  {{/paper-button}}
+  <span class="logo no-border"></span>
+  {{#paper-button raised=true round=true class="link-buttons" href="https://github.com/sl249"}}
+    {{svg-icon "github" size=20}}
+    <span class="layout-margin">Github</span>
+  {{/paper-button}}
+
+  {{#paper-button raised=true round=true class="link-buttons" href="https://www.linkedin.com/in/ricardobeas/"}}
+    {{svg-icon "linkedin" size=20}}
+    <span class="layout-margin">LinkedIn</span>
+  {{/paper-button}}
+</div>
+{{#paper-button raised=true primary=true round=true class="resume-download"}}
+  <div class="layout-row layout-align-start-center">
+    {{paper-icon "file_download" class="layout-margin"}}
+    <div class="layout-column layout-align-start-start">
+      <span class="md-body-1">Download</span>
+      <span class="md-body-1">Resume</span>
+    </div>
+  </div>
+{{/paper-button}}

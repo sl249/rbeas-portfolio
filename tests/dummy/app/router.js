@@ -1,5 +1,6 @@
 import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
+import PortfolioRouter from 'rbeas-portfolio/router';
 
 const Router = EmberRouter.extend({
   location: config.locationType,
@@ -7,6 +8,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  PortfolioRouter.call(this, this);
 });
 
 export default Router;
