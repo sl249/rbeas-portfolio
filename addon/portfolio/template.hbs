@@ -1,21 +1,73 @@
-<div class="header"></div>
+{{#paper-sidenav
+  class="md-whiteframe-z2"
+  name="sidenav"
+  position="left"
+  open=sideNavOpen
+  lockedOpen=false
+  onToggle=(action (mut sideNavOpen))}}
+  {{#paper-toolbar as |toolbar|}}
+    {{#toolbar.tools}}
+      <div class="layout-column flex">
+        <span class="md-subhead">Ricardo Beas</span>
+        <span class="md-caption">{{email}}</span>
+      </div>
+      {{#paper-button iconButton=true onClick=(action 'copyEmail' email)}}
+        {{svg-icon "copy" size=14}}
+      {{/paper-button}}
+      <span class="logo small"></span>
+    {{/toolbar.tools}}
+  {{/paper-toolbar}}
+  {{#paper-content}}
+    {{#paper-list}}
+      {{#paper-item onClick="Something" class="md-2-line"}}
+        {{svg-icon "home" class="md-avatar-icon"}}
+        <div class="md-list-item-text">
+          <h3>Home</h3>
+        </div>
+      {{/paper-item}}
+      {{paper-divider}}
+      {{#paper-item onClick="Something" class="md-2-line"}}
+        {{svg-icon "comment" class="md-avatar-icon"}}
+        <div class="md-list-item-text">
+          <h3>Blog</h3>
+        </div>
+      {{/paper-item}}
+      {{paper-divider}}
+    {{/paper-list}}
+  {{/paper-content}}
+{{/paper-sidenav}}
 
-<div class="layout-row layout-align-start-start">
-  {{#paper-button iconButton=true class="contrast"}}
-    {{paper-icon "menu" size=30}}
-  {{/paper-button}}
-  <span class="logo no-border"></span>
-  {{#paper-button raised=true round=true class="link-buttons" href="https://github.com/sl249"}}
-    {{svg-icon "github" size=20}}
-    <span class="layout-margin">Github</span>
-  {{/paper-button}}
-
-  {{#paper-button raised=true round=true class="link-buttons" href="https://www.linkedin.com/in/ricardobeas/"}}
-    {{svg-icon "linkedin" size=20}}
-    <span class="layout-margin">LinkedIn</span>
-  {{/paper-button}}
+<div class="header">
+  <div class="pattern">
+  </div>
 </div>
-{{#paper-button raised=true primary=true round=true class="resume-download"}}
+<div class="layout-column flex">
+  <div class="layout-row layout-align-start-start">
+    <div class="layout-row flex layout-padding layout-align-start-center">
+      {{#paper-button iconButton=true class="contrast layout-padding-none" onClick=(action (toggle 'sideNavOpen' this))}}
+        {{paper-icon "menu" size=30}}
+      {{/paper-button}}
+      <span class="logo no-border"></span>
+      <span class="flex-60"></span>
+      {{#paper-button raised=true round=true class="link-buttons" href="https://github.com/sl249"}}
+        {{svg-icon "github" size=20}}
+        <span class="layout-margin">Github</span>
+      {{/paper-button}}
+      {{#paper-button raised=true round=true class="link-buttons" href="https://www.linkedin.com/in/ricardobeas/"}}
+        {{svg-icon "linkedin" size=20}}
+        <span class="layout-margin">LinkedIn</span>
+      {{/paper-button}}
+    </div>
+    <div class="layout-column headshot-text">
+      <span>Designer</span>
+      <span>Developer</span>
+      <span>Perfectionist</span>
+    </div>
+    <img src="rbeas-portfolio/headshot.jpg" alt="Picture of Ricardo Beas" class="headshot">
+  </div>
+  {{outlet}}
+</div>
+{{#paper-button download="Ricardo A. Beas Medina Resume.docx" href="rbeas-portfolio/Ricardo A. Beas Medina Resume.docx" raised=true primary=true round=true class="resume-download"}}
   <div class="layout-row layout-align-start-center">
     {{paper-icon "file_download" class="layout-margin"}}
     <div class="layout-column layout-align-start-start">

@@ -1,3 +1,4 @@
+
 body {
   max-width: 100%;
   max-height: 100%;
@@ -42,6 +43,10 @@ $color-indigo: (
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+h2, h3, h4, h5 {
+  @include Roboto-Condensed;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -56,6 +61,13 @@ body {
   z-index: -1;
   background: linear-gradient(92.74deg, color($color-deep-purple, 'A100') 16.67%, color($primary, '500') 100.76%);
   transform: rotate(3deg);
+  .pattern {
+    position: absolute;
+    height: 140%;
+    width: 46%;
+    background-image: url("/rbeas-portfolio/pattern.svg");
+    transform: rotate(-13deg);
+  }
 }
 
 body {
@@ -64,9 +76,14 @@ body {
 
 .logo {
   &:not(.no-border) {
-    border: 4px solid color($primary, 'contrastDefaultColor');
-    padding: 8px 16px;
+    border: 2px solid color($primary, 'contrastDefaultColor');
+    padding: 4px 8px;
     border-radius: 4px;
+  }
+  &.small {
+    &:before {
+      font-size: 30px;
+    }
   }
   &:before {
     content: 'Rb';
@@ -75,6 +92,20 @@ body {
     font-weight: bold;
     font-size: 40px;
   }
+}
+
+.headshot {
+  height: 140px;
+  border-radius: 50%;
+  border: 8px solid color($primary, 'contrastDefaultColor');
+}
+
+.headshot-text {
+  @include Roboto-Condensed;
+  color: color($primary, 'contrastDefaultColor');
+  @include md-title;
+  font-size: 26px;
+  line-height: 40px;
 }
 
 .md-button {
@@ -102,4 +133,34 @@ body {
 
 md-icon.md-default-theme, md-icon {
   color: color($primary, 'contrastDefaultColor');
+}
+
+.layout-padding-none {
+  padding: 0px !important;
+}
+
+.layout-margin-none {
+  margin: 0px !important;
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar) , md-toolbar:not(.md-menu-toolbar) {
+  &.stretch {
+    min-height: initial;
+    .md-toolbar-tools {
+      height: initial;
+      max-height: initial;
+    }
+  }
+}
+
+md-card {
+  &.md-round {
+    border-radius: 14px;
+    md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+      background-color: rgba(color($color-grey, '900'), .08);
+      color: color($color-grey, '700');
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+    }
+  }
 }
