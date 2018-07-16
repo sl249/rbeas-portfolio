@@ -22,3 +22,18 @@
 .preloader .logo::before {
   font-size: 80px
 }
+
+.logo:not(.no-border) {
+  border: 2px solid white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.logo.small:before {
+  font-size: 30px;
+}
+.logo:before {
+  content: 'Rb';
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}

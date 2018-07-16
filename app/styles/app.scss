@@ -72,6 +72,7 @@ body {
     width: 60%;
     background-image: url("/rbeas-portfolio/pattern.svg");
     transform: rotate(-13deg);
+    -webkit-backface-visibility: hidden;
   }
 }
 
@@ -377,6 +378,10 @@ md-dialog {
     max-height: 100%;
     background-color: rgba(color($primary, 'contrastDefaultColor'), .8);
   }
+}
+
+.bold {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 900px) {

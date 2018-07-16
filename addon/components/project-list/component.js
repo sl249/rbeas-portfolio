@@ -7,6 +7,7 @@ const SLIDESHOW_TIME = 6;
 
 export default Component.extend({
   layout,
+  paused: false,
   timer: 100,
   selectedProjectObject: computed('selectedProject', function () {
     return this.get('projects').objectAt(this.get('selectedProject'));
@@ -16,7 +17,7 @@ export default Component.extend({
     this.set('selectedProject', 0);
 
     this.set('interval', setInterval(() => {
-      if (!this.get('expandedProject')) {
+      if (!this.get('expandedProject') && !this.get('paused')) {
         if (this.get('timer')) {
           this.set('timer', this.get('timer') - 1);
         } else {
@@ -47,12 +48,12 @@ export default Component.extend({
     },
     {
       title: 'Trove Data Catalog Browser Utility',
-      description: 'Figma Design and Ember Beta implementation for analytics dasboard in Trove Platform',
+      description: 'Ember implementation of table column viewing of data science platform. Rendering of dynamic card matrix using virtual scrolling to visualize thousands of cards without straining the application.',
       image: 'catalog.png'
     },
     {
       title: 'Telenotes Mapping Utility',
-      description: 'Figma Design and Ember Beta implementation for analytics dasboard in Trove Platform',
+      description: 'Customer visualization for CRM platform buillt in AngularJS.',
       image: 'dashboard.png'
     }
   ]),
