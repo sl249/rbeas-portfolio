@@ -6,8 +6,14 @@ export default Route.extend({
 
   actions: {
     didTransition() {
-      this.get('preloader').addLoadedClass('fade');
-      this.get('preloader').removePreloader(250);
+      if (!this.get('loaded')) {
+        this.get('preloader').addLoadedClass('fade');
+        this.get('preloader').removePreloader(250);
+        this.set('loaded', true);
+      }
+    },
+    selectRoute(index) {
+      this.set('controller.selectedRoute', index);
     }
   }
 });

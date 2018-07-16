@@ -1,0 +1,13 @@
+{{#paper-dialog class="fulscreen"}}
+  {{#paper-toolbar as |toolbar|}}
+    {{#toolbar.tools}}
+      <h2 class="flex">{{project.title}}</h2>
+      {{#paper-button iconButton=true onClick=onClose}}
+        {{paper-icon "close"}}
+      {{/paper-button}}
+    {{/toolbar.tools}}
+  {{/paper-toolbar}}
+  <div class="layout-column flex layout-align-center-center">
+    <img src="rbeas-portfolio/{{project.image}}" class="md-whiteframe-6dp">
+  </div>
+{{/paper-dialog}}

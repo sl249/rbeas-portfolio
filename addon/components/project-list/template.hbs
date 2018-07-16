@@ -1,0 +1,35 @@
+<div class="layout-row flex selected-project layout-align-center-start">
+  <img src="rbeas-portfolio/{{selectedProjectObject.image}}">
+    <div class="layout-align-center-center timer-container layout-column">
+      {{paper-progress-circular value=timer primary=true class="layout-align-center-center layout-row" diameter=20}}
+    </div>
+    <div class="layout-column slideshow-controls flex layout-align-center-center {{if expandedProject 'active'}}">
+      <h2 class="md-subhead">{{selectedProjectObject.title}}</h2>
+      <div class="layout-row layout-align-center-center">
+        {{#paper-button iconButton=true class="back layout-padding-none" onClick=(action 'previous')}}
+          {{paper-icon "keyboard-arrow-left" size=22}}
+        {{/paper-button}}
+        {{#paper-button iconButton=true onClick=(action 'expand' selectedProjectObject) class="layout-padding-none"}}
+          {{paper-icon "zoom_out_map" size=22}}
+        {{/paper-button}}
+        {{#paper-button iconButton=true class="forward layout-padding-none" onClick=(action 'next')}}
+          {{paper-icon "keyboard-arrow-right" size=22}}
+        {{/paper-button}}
+      </div>
+    </div>
+</div>
+{{#each projects as |project|}}
+  <div class="layout-row project-list-item {{if (eq selectedProjectObject project) 'active'}}">
+    <div class="layout-column flex-60">
+      <h3 class="md-title underlined">{{project.title}}</h3>
+      <p class="layout-padding-top">{{project.description}}</p>
+    </div>
+    <div class="layout-row flex layout-align-center-center">
+      <img src="rbeas-portfolio/{{project.image}}">
+    </div>
+  </div>
+  {{paper-divider}}
+{{/each}}
+{{#if expandedProject}}
+  {{expand-project project=expandedProject onClose=(action (toggle 'expandedProject' this))}}
+{{/if}}

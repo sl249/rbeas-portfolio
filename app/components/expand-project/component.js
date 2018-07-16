@@ -1,0 +1,1 @@
+export { default } from 'rbeas-portfolio/components/expand-project/component';

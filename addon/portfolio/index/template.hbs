@@ -1,17 +1,46 @@
-<div class="layout-row flex layout-row flex layout-align-space-between-start">
-{{#paper-card class="flex-40 md-round flex-offset-5" as |card|}}
+<div class="layout-row flex-none layout-row flex layout-align-space-between-start">
+{{#paper-card class="flex-45 md-round left-panel" as |card|}}
   {{#paper-toolbar as |toolbar|}}
     {{#toolbar.tools}}
       <h2>Projects</h2>
     {{/toolbar.tools}}
   {{/paper-toolbar}}
-  {{#paper-card-content}}
-    TESTEST
+  {{#paper-card-content class="layout-padding-none layout-column"}}
+    {{project-list}}
   {{/paper-card-content}}
 {{/paper-card}}
-{{#paper-card class="flex md-round" as |card|}}
-  {{#paper-card-content}}
-    TESTEST
+{{#paper-card class="flex-45 md-round right-panel" as |card|}}
+  {{#paper-card-content class="layout-padding layout-margin"}}
+    <div class="layout-row layout-align-start-start">
+      <h2 class="underlined md-display-1 layout-margin-none flex">Hello!</h2>
+      <h4 class="md-body-1 flex-20">Some things I work with everyday&hellip;</h4>
+      <div class="layout-row flex-50 layout-wrap layout-align-end-start">
+        {{#each everydayItems as |item|}}
+          <span class="chip layout-margin-left layout-margin-right layout-margin-bottom">{{item}}</span>
+        {{/each}}
+      </div>
+    </div>
+    <div class="layout-column">
+    <p>
+      I am a JavaScript Developer Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Aenean scelerisque quam ac ante aliquam ullamcorper.
+      Pellentesque vitae ante sit amet felis cursus finibus. Nulla tempor viverra massa
+
+    </p>
+    <h2 class="italic md-title">User <span class="primary-text">Experience</span> and <span class="primary-text">Satifaction</span> are at the core of my principles</h2>
+    <p>
+      I am a JavaScript Developer Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Aenean scelerisque quam ac ante aliquam ullamcorper.
+      Pellentesque vitae ante sit amet felis cursus finibus.
+    </p>
+    <p>
+      I am a JavaScript Developer Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Aenean scelerisque quam ac ante aliquam ullamcorper.
+      Pellentesque vitae ante sit amet felis cursus finibus. Nulla tempor viverra massa
+      I am a JavaScript Developer Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Aenean scelerisque quam ac ante aliquam ullamcorper.
+    </p>
+    </div>
   {{/paper-card-content}}
 {{/paper-card}}
 </div>
