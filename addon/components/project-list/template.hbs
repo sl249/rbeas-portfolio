@@ -1,5 +1,5 @@
 <div class="layout-row flex selected-project {{if focused 'md-round md-focused'}} layout-align-center-start">
-  <img src="/rbeas-portfolio/{{selectedProjectObject.image}}">
+  <img src="/rbeas-portfolio/images/{{selectedProjectObject.image}}">
   <div class="layout-align-center-center timer-container layout-column">
     {{paper-progress-circular value=timer primary=true class="layout-align-center-center layout-row" diameter=20}}
   </div>
@@ -27,7 +27,7 @@
         <p class="layout-padding-top">{{project.description}}</p>
       </div>
       <div class="layout-row flex layout-align-center-center">
-        <img src="/rbeas-portfolio/{{project.image}}">
+        <img src="rbeas-portfolio/images/{{project.image}}">
       </div>
     </div>
     {{paper-divider}}
