@@ -54,7 +54,7 @@ export default Component.extend({
     {
       title: 'Telenotes Mapping Utility',
       description: 'Customer visualization for CRM platform buillt in AngularJS.',
-      image: 'dashboard.png'
+      image: 'maps.png'
     }
   ]),
   actions: {

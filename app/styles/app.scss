@@ -233,6 +233,13 @@ md-list-item {
 .left-panel {
   margin-top: -148px;
   margin-left: 3%;
+
+  transition: margin 0.25s ease;
+
+
+  &.md-focused {
+    margin-top: 0px;
+  }
 }
 
 .right-panel {
@@ -311,6 +318,23 @@ md-list-item {
 }
 
 .selected-project {
+  overflow: hidden;
+  &.md-round {
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    .slideshow-controls {
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+    }
+  }
+
+  transition: height 0.25s ease;
+
+
+  &.md-focused {
+    height: 400px;
+  }
+
   .slideshow-controls {
     position: absolute;
     height: 100%;
@@ -391,5 +415,17 @@ md-dialog {
 
   .main {
     display: none !important;
+  }
+}
+
+
+.md-button {
+  &.md-default-theme {
+    &.md-primary:not([disabled]) {
+      md-icon {
+        color: color($primary);
+        fill: color($primary);
+      }
+    }
   }
 }

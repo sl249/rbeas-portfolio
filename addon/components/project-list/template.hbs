@@ -1,4 +1,4 @@
-<div class="layout-row flex selected-project layout-align-center-start">
+<div class="layout-row flex selected-project {{if focused 'md-round md-focused'}} layout-align-center-start">
   <img src="rbeas-portfolio/{{selectedProjectObject.image}}">
   <div class="layout-align-center-center timer-container layout-column">
     {{paper-progress-circular value=timer primary=true class="layout-align-center-center layout-row" diameter=20}}
@@ -19,18 +19,20 @@
     </div>
   {{/mouse-event}}
 </div>
-{{#each projects as |project|}}
-  <div class="layout-row project-list-item {{if (eq selectedProjectObject project) 'active'}}">
-    <div class="layout-column flex-60">
-      <h3 class="md-title underlined">{{project.title}}</h3>
-      <p class="layout-padding-top">{{project.description}}</p>
+{{#unless focused}}
+  {{#each projects as |project|}}
+    <div class="layout-row project-list-item {{if (eq selectedProjectObject project) 'active'}}">
+      <div class="layout-column flex-60">
+        <h3 class="md-title underlined">{{project.title}}</h3>
+        <p class="layout-padding-top">{{project.description}}</p>
+      </div>
+      <div class="layout-row flex layout-align-center-center">
+        <img src="rbeas-portfolio/{{project.image}}">
+      </div>
     </div>
-    <div class="layout-row flex layout-align-center-center">
-      <img src="rbeas-portfolio/{{project.image}}">
-    </div>
-  </div>
-  {{paper-divider}}
-{{/each}}
+    {{paper-divider}}
+  {{/each}}
+{{/unless}}
 {{#if expandedProject}}
   {{expand-project project=expandedProject onClose=(action (toggle 'expandedProject' this))}}
 {{/if}}

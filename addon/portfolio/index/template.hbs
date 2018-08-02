@@ -1,12 +1,16 @@
 <div class="layout-row flex-none layout-row flex layout-align-space-between-start">
-{{#paper-card class="flex-45 md-round left-panel" as |card|}}
+{{#paper-card class=(concat "flex-45 md-round left-panel" (if focused ' md-focused')) as |card|}}
   {{#paper-toolbar as |toolbar|}}
     {{#toolbar.tools}}
-      <h2>Projects</h2>
+      <h2 class="flex">Projects</h2>
+      {{!--{{#paper-button primary=true onClick=(action (toggle 'focused' this))}}
+        {{svg-icon (if focused "account-circle" "web")}}
+        {{if focused "Show Bio" "Focus Projects"}}
+      {{/paper-button}}--}}
     {{/toolbar.tools}}
   {{/paper-toolbar}}
   {{#paper-card-content class="layout-padding-none layout-column"}}
-    {{project-list}}
+    {{project-list focused=focused}}
   {{/paper-card-content}}
 {{/paper-card}}
 {{#paper-card class="flex-45 md-round right-panel" as |card|}}
