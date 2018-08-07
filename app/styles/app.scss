@@ -505,6 +505,22 @@ md-dialog {
     display: none;
   }
 
+  md-dialog {
+    &.fulscreen {
+      img {
+        height: auto;
+        min-width: 200%;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  .expanded-image-container {
+    position: relative;
+    overflow-x: auto;
+  }
+
   .everyday-list {
     max-width: 100% !important;
   }
