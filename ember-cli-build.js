@@ -9,8 +9,8 @@ module.exports = function(defaults) {
       enabled: false
     },
     favicons: {
-      source: '/tests',
       faviconsConfig: {
+        theme_color: '#304FFE'
       }
     }
   });
