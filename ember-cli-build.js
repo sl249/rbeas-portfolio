@@ -10,6 +10,7 @@ module.exports = function(defaults) {
     },
     favicons: {
       faviconsConfig: {
+        path: '/rbeas-portfolio',
         theme_color: '#304FFE'
       }
     }
