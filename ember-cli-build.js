@@ -10,8 +10,7 @@ module.exports = function(defaults) {
     },
     favicons: {
       faviconsConfig: {
-        path: '',
-        theme_color: '#304FFE'
+        path: ''
       }
     }
   });
