@@ -36,19 +36,21 @@
     <div class="layout-row flex-none header-container">
       <div class="layout-row flex layout-align-start-start">
         <div class="layout-row flex layout-padding layout-align-start-center">
-          {{#paper-button iconButton=true class="contrast layout-padding-none" onClick=(action (toggle 'sideNavOpen' this))}}
+          {{#paper-button iconButton=true class="contrast layout-padding-none flex-none" onClick=(action (toggle 'sideNavOpen' this))}}
             {{paper-icon "menu" size=30}}
           {{/paper-button}}
           <span class="logo no-border"></span>
           <span class="flex-55"></span>
-          {{#paper-button raised=true round=true class="link-buttons flex-none" href="https://github.com/sl249"}}
-            {{svg-icon "github" size=20}}
-            <span class="layout-margin">Github</span>
-          {{/paper-button}}
-          {{#paper-button raised=true round=true class="link-buttons flex-none" href="https://www.linkedin.com/in/ricardobeas/"}}
-            {{svg-icon "linkedin" size=20}}
-            <span class="layout-margin">LinkedIn</span>
-          {{/paper-button}}
+          <div class="layout-row social-links">
+            {{#paper-button raised=true round=true class="link-buttons flex-none" href="https://github.com/sl249"}}
+              {{svg-icon "github" size=20}}
+              <span class="layout-margin">Github</span>
+            {{/paper-button}}
+            {{#paper-button raised=true round=true class="link-buttons flex-none" href="https://www.linkedin.com/in/ricardobeas/"}}
+              {{svg-icon "linkedin" size=20}}
+              <span class="layout-margin">LinkedIn</span>
+            {{/paper-button}}
+          </div>
         </div>
       </div>
       <div class="layout-column headshot-text layout-align-end-start">
@@ -67,12 +69,12 @@
     {{outlet}}
   </div>
 </div>
-<div class="layout-column flex layout-align-center-center icon-text mobile-message">
+<!-- <div class="layout-column flex layout-align-center-center icon-text mobile-message">
   <div class="icon-container">
     {{paper-icon "phone_android" size=40 class="layout-margin-none"}}
   </div>
   <h2 class="md-title layout-margin">Mobile Coming Soon!</h2>
-</div>
+</div> -->
 {{#paper-button download="Ricardo A. Beas Medina Resume.docx" href="rbeas-portfolio/Ricardo A. Beas Medina Resume.docx" raised=true primary=true round=true class="resume-download"}}
   <div class="layout-row layout-align-start-center">
     {{paper-icon "file_download" class="layout-margin"}}

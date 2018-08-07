@@ -1,5 +1,27 @@
+<div class="layout-row layout-align-center-center tab-container flex-none">
+  {{#paper-card class="flex-95 md-round layout-margin-none"}}
+    {{#paper-toolbar as |toolbar|}}
+      {{#toolbar.tools}}
+        {{#paper-tabs
+          center=center
+          class="flex"
+          stretch=true
+          borderBottom=borderBottom
+          selected=selectedPanel
+          onChange=(action (mut selectedPanel)) as |tabs|}}
+          {{#tabs.tab}}
+            Projects
+          {{/tabs.tab}}
+          {{#tabs.tab}}
+            About Me
+          {{/tabs.tab}}
+        {{/paper-tabs}}
+      {{/toolbar.tools}}
+    {{/paper-toolbar}}
+  {{/paper-card}}
+</div>
 <div class="layout-row flex-none layout-row flex layout-align-space-between-start">
-{{#paper-card class=(concat "flex-45 md-round left-panel" (if focused ' md-focused')) as |card|}}
+{{#paper-card class=(concat "flex-45 md-round left-panel" (if focused ' md-focused') (if (eq selectedPanel 0) ' md-active')) as |card|}}
   {{#paper-toolbar as |toolbar|}}
     {{#toolbar.tools}}
       <h2 class="flex">Projects</h2>
@@ -13,18 +35,18 @@
     {{project-list focused=focused}}
   {{/paper-card-content}}
 {{/paper-card}}
-{{#paper-card class="flex-45 md-round right-panel" as |card|}}
+{{#paper-card class=(concat "flex-45 md-round right-panel" (if (eq selectedPanel 1) ' md-active')) as |card|}}
   {{#paper-card-content class="layout-padding layout-margin"}}
-    <div class="layout-row layout-align-start-start">
+    <div class="layout-row layout-align-start-start layout-wrap everyday-container">
       <h2 class="underlined md-display-1 layout-margin-none flex">Hello!</h2>
-      <h4 class="md-body-1 flex-20">Some things I work with everyday&hellip;</h4>
-      <div class="layout-row flex-50 layout-wrap layout-align-end-start">
+      <h4 class="md-body-1 flex-20 everyday-label">Some things I work with everyday&hellip;</h4>
+      <div class="layout-row flex-50 layout-wrap layout-align-end-start everyday-list">
         {{#each everydayItems as |item|}}
           <span class="chip layout-margin-left layout-margin-right layout-margin-bottom">{{item}}</span>
         {{/each}}
       </div>
     </div>
-    <div class="layout-column">
+    <div class="layout-column intro-container">
     <p>
       I am a <span class="primary-text italic bold">JavaScript Developer</span> specializing in <span class="primary-text italic bold">User Experience and Interface design.</span> I have spent the last <span class="primary-text italic bold">2+ years</span> honing and specializing my skills in
       building and maintaining ambitious projects that both scale and function with performace in mind.

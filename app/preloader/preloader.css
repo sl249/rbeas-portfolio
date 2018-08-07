@@ -37,3 +37,86 @@
   font-weight: bold;
   font-size: 40px;
 }
+
+.animated-logo {
+  animation-name: heartBeat;
+  -webkit-animation-name: heartBeat;
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+  animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 2;
+  animation-delay: 3;
+  -webkit-animation-delay: 3;
+}
+
+@media only screen and (max-width: 900px) {
+  .animated-logo {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+
+@keyframes heartBeat {
+   0% {
+    transform: scale(none);
+    -webkit-transform: scale(none);
+  }
+
+  20% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+  }
+
+  30% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+  }
+
+  45% {
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+  }
+
+  50% {
+    transform: scale(none);
+    -webkit-transform: scale(none);
+  }
+
+  100% {
+    transform: scale(none);
+    -webkit-transform: scale(none);
+  }
+}
+
+@-webkit-keyframes heartBeat {
+  0% {
+    transform: scale(none);
+    -webkit-transform: scale(none);
+  }
+
+  20% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+  }
+
+  30% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+  }
+
+  45% {
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+  }
+
+  50% {
+    transform: scale(none);
+    -webkit-transform: scale(none);
+  }
+
+  100% {
+    transform: scale(none);
+    -webkit-transform: scale(none);
+  }
+}

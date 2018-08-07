@@ -3,7 +3,6 @@
   <div class="layout-align-center-center timer-container layout-column">
     {{paper-progress-circular value=timer primary=true class="layout-align-center-center layout-row" diameter=20}}
   </div>
-
   {{#mouse-event class=(concat "layout-column slideshow-controls flex layout-align-center-center " (if expandedProject 'active')) onMouseEnter=(action (toggle 'paused' this)) onMouseLeave=(action (toggle 'paused' this))}}
     <h2 class="md-subhead">{{selectedProjectObject.title}}</h2>
     <div class="layout-row layout-align-center-center">
@@ -26,8 +25,11 @@
         <h3 class="md-title underlined">{{project.title}}</h3>
         <p class="layout-padding-top">{{project.description}}</p>
       </div>
-      <div class="layout-row flex layout-align-center-center">
+      <div class="layout-row flex layout-align-center-center list-image">
         <img src="rbeas-portfolio/images/{{project.image}}">
+        {{#paper-button raised=true iconButton=true onClick=(action 'expand' project) class="layout-padding-none"}}
+          {{paper-icon "zoom_out_map" size=22}}
+        {{/paper-button}}
       </div>
     </div>
     {{paper-divider}}

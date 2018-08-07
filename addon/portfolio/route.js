@@ -8,7 +8,7 @@ export default Route.extend({
     didTransition() {
       if (!this.get('loaded')) {
         this.get('preloader').addLoadedClass('fade');
-        this.get('preloader').removePreloader(250);
+        this.get('preloader').removePreloader(300);
         this.set('loaded', true);
       }
     },

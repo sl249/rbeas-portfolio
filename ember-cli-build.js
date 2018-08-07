@@ -7,6 +7,11 @@ module.exports = function(defaults) {
     // Add options here
     fingerprint: {
       enabled: false
+    },
+    favicons: {
+      source: '/tests',
+      faviconsConfig: {
+      }
     }
   });
 
