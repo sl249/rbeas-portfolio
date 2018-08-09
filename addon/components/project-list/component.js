@@ -37,7 +37,7 @@ export default Component.extend({
   },
   projects: A([
     {
-      title: 'Docker & Kuberneters Status Deployment Dashboard',
+      title: 'Docker & Kubernetes Status Deployment Dashboard',
       description: 'Figma Design and Ember Beta implementation for analytics dasboard in Trove Platform',
       image: 'dashboard.png'
     },
