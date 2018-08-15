@@ -75,12 +75,14 @@
   </div>
   <h2 class="md-title layout-margin">Mobile Coming Soon!</h2>
 </div> -->
-{{#paper-button download="Ricardo A. Beas Medina Resume.docx" href="rbeas-portfolio/Ricardo A. Beas Medina Resume.docx" raised=true primary=true round=true class="resume-download"}}
-  <div class="layout-row layout-align-start-center">
-    {{paper-icon "file_download" class="layout-margin"}}
-    <div class="layout-column layout-align-start-start">
-      <span class="md-body-1">Download</span>
-      <span class="md-body-1">Resume</span>
+{{#unless (eq selectedRoute 2)}}
+  {{#paper-button download="Ricardo A. Beas Medina Resume.docx" href="rbeas-portfolio/Ricardo A. Beas Medina Resume.docx" raised=true primary=true round=true class="resume-download"}}
+    <div class="layout-row layout-align-start-center">
+      {{paper-icon "file_download" class="layout-margin"}}
+      <div class="layout-column layout-align-start-start">
+        <span class="md-body-1">Download</span>
+        <span class="md-body-1">Resume</span>
+      </div>
     </div>
-  </div>
-{{/paper-button}}
+  {{/paper-button}}
+{{/unless}}
