@@ -14,6 +14,11 @@ export default Controller.extend({
       link: 'portfolio.blog',
       icon: 'comment',
       title: 'Blog'
+    },
+    {
+      link: 'portfolio.resume',
+      icon: 'account-circle',
+      title: 'View Resume Online'
     }
   ]),
   actions: {

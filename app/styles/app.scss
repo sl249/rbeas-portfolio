@@ -419,6 +419,10 @@ md-dialog {
   font-weight: bold;
 }
 
+.ember-cli-google-viewer {
+  margin-top: -10px;
+}
+
 @media only screen and (max-width: 900px) {
   // .mobile-message {
   //   display: inherit !important;
@@ -427,6 +431,10 @@ md-dialog {
   // .main {
   //   display: none !important;
   // }
+
+  .ember-cli-google-viewer {
+    margin-top: 90px;
+  }
 
   .tab-container {
     display: flex;
@@ -583,4 +591,9 @@ md-dialog {
       }
     }
   }
+}
+
+
+.ember-cli-google-viewer {
+  height: 100%;
 }

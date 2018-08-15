@@ -33,6 +33,7 @@
     "ember-cli-favicon": "^1.0.0",
     "ember-cli-github-pages": "^0.2.0",
     "ember-cli-google-fonts": "^2.16.2",
+    "ember-cli-google-viewer": "^1.1.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-preloader": "^0.2.0",
