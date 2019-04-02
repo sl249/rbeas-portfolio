@@ -168,6 +168,11 @@ body {
       @include Roboto-Condensed;
       padding: 8px 40px 8px 4px;
       border-radius: 20px;
+
+      md-icon {
+        color: paper-color($primary, '0') !important;
+        fill: paper-color($primary, '0') !important;
+      }
     }
   }
 }
