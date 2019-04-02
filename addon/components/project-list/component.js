@@ -37,6 +37,11 @@ export default Component.extend({
   },
   projects: A([
     {
+      title: 'Service Portal',
+      description: 'Figma Design and Ember implementation for custom Jira Service Desk third-party application',
+      image: 'service-portal.png'
+    },
+    {
       title: 'Docker & Kubernetes Status Deployment Dashboard',
       description: 'Figma Design and Ember Beta implementation for analytics dasboard in Trove Platform',
       image: 'dashboard.png'
