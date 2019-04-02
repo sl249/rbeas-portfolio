@@ -239,7 +239,7 @@ md-list-item {
   margin-left: 3%;
 
   transition: margin 0.25s ease;
-
+  max-height: initial !important;
 
   &.md-focused {
     margin-top: 0px;
