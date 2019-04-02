@@ -30,7 +30,7 @@
     "ember-cli": "~3.1.4",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
-    "ember-cli-favicon": "^1.0.0",
+    "ember-cli-favicon": "1.0.0",
     "ember-cli-github-pages": "^0.2.0",
     "ember-cli-google-fonts": "^2.16.2",
     "ember-cli-google-viewer": "^1.1.1",
